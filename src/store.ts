@@ -20,7 +20,7 @@ export const useSugarStore = create<SugarStore>()(
     (set, get) => ({
       entries: [],
       addEntry: (grams, note, dateISO) => {
-        const date = dateISO ?? new Date().toISOString().slice(0, 10)
+        const date = dateISO ?? new Date().toLocaleDateString("en-CA").slice(0, 10)
         const id = crypto.randomUUID()
         set({ entries: [...get().entries, { id, grams, note, dateISO: date }] })
       },

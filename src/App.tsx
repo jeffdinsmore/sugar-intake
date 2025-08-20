@@ -3,7 +3,7 @@ import { useSugarStore } from './store'
 import './index.css'
 
 function todayISO() {
-  return new Date().toISOString().slice(0, 10)
+  return new Date().toLocaleDateString("en-CA").slice(0, 10)
 }
 
 export default function App() {
@@ -15,8 +15,10 @@ export default function App() {
   const addEntry = useSugarStore(s => s.addEntry)
   const removeEntry = useSugarStore(s => s.removeEntry)
   const getTotalForDate = useSugarStore(s => s.getTotalForDate)
-
+  console.log("entries: ", entries);
   const totalToday = useMemo(() => getTotalForDate(date), [date, getTotalForDate])
+
+  console.log("entries: ", entries);
 
   function submit(e: React.FormEvent) {
     e.preventDefault()
