@@ -16,7 +16,7 @@ export default function App() {
   const addEntry = useSugarStore(s => s.addEntry)
   const removeEntry = useSugarStore(s => s.removeEntry)
   const getTotalForDate = useSugarStore(s => s.getTotalForDate)
-  console.log("entries: ", entries);
+
 
   function submit(e: React.FormEvent) {
     e.preventDefault()
@@ -25,6 +25,7 @@ export default function App() {
     addEntry(n, note.trim() || undefined, date)
     setGrams('')
     setNote('')
+    console.log("entries: ", entries)
   }
 
   const entriesForDate = entries
@@ -85,7 +86,7 @@ export default function App() {
             {entriesForDate.map(e => (
               <li key={e.id}>
                 <span>{e.grams} g{e.note ? ` — ${e.note}` : ''}</span>
-                <button className="danger" onClick={() => removeEntry(e.id)}>Delete</button>
+                <button className="danger" onClick={() => {removeEntry(e.id), console.log("entries: ", entries)}}>Delete</button>
               </li>
             ))}
           </ul>
