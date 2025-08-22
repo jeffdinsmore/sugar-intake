@@ -10,14 +10,12 @@ export default function App() {
   const [grams, setGrams] = useState<string>('')
   const [note, setNote] = useState('')
   const [date, setDate] = useState(todayISO())
+  const totalToday = useSugarStore(s => s.getTotalForDate(date))
 
   const entries = useSugarStore(s => s.entries)
   const addEntry = useSugarStore(s => s.addEntry)
   const removeEntry = useSugarStore(s => s.removeEntry)
   const getTotalForDate = useSugarStore(s => s.getTotalForDate)
-  console.log("entries: ", entries);
-  const totalToday = useMemo(() => getTotalForDate(date), [date, getTotalForDate])
-
   console.log("entries: ", entries);
 
   function submit(e: React.FormEvent) {
