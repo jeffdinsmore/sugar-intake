@@ -125,6 +125,10 @@ input {
   outline: none;
 }
 
+footer {
+  background-color: #111827;
+}
+
 button {
   background: var(--accent);
   border: none;
