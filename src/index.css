@@ -91,6 +91,7 @@ html, body, #root {
   max-width: 900px;
   margin: 24px auto;
   padding: 0 16px;
+  padding-bottom: 80px;
 }
 
 h1 { font-size: 28px; margin: 0 0 16px; }
