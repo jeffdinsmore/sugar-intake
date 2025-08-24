@@ -164,7 +164,7 @@ button.danger {
 
 .grid7 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 8px;
   width: 100%;
   padding: 0;
@@ -178,7 +178,9 @@ button.danger {
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
+  transition: transform .08s ease;
 }
+.day:active { transform: scale(0.98); }
 .day.active { outline: 2px solid var(--accent); }
 .day-date { font-size: 12px; color: var(--muted); }
 .day-total { font-size: 16px; font-weight: 700; margin-top: 4px; }
