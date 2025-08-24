@@ -104,6 +104,11 @@ export default function App() {
           ))}
         </ul>
       </div>
+
+      <footer style={{ height: "80px"}}>
+        
+      </footer>
     </div>
+    
   )
 }
