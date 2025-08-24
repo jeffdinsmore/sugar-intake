@@ -104,9 +104,10 @@ export default function App() {
           ))}
         </ul>
       </div>
-      <div style={{height: "80px", color: "#111827"}}></div>
+      <div style={{height: "80px", backgroundColor: "#0f172a"}}></div>
       
     </div>
     
   )
 }
+//#111827
